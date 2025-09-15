@@ -19,5 +19,8 @@
   },
   "dependencies": {
     "style-dictionary": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
