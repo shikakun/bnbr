@@ -1,0 +1,36 @@
+{
+  "name": "bnbr",
+  "version": "0.0.1",
+  "description": "A craft React UI component library.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "bnbr": "./bin/cli.js"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "design-tokens",
+    "design-system"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "dependencies": {
+    "@bnbr/react": "workspace:*",
+    "@bnbr/design-tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  },
+  "packageManager": "pnpm@10.16.0"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@bnbr/design-tokens",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/tokens.js",
+      "types": "./dist/tokens.d.ts"
+    },
+    "./css": "./dist/tokens.css",
+    "./json": "./dist/tokens.json"
+  },
+  "scripts": {
+    "build": "style-dictionary build --config style-dictionary.config.js",
+    "dev": "style-dictionary build --config style-dictionary.config.js",
+    "typecheck": "exit 0"
+  },
+  "dependencies": {
+    "style-dictionary": "^5.0.4"
+  }
+}
