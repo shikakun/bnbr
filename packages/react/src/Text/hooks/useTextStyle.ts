@@ -71,25 +71,25 @@ const resolveStyle = (style: TextStyle): ResolvedTextStyle => {
 
   let lineHeight: string;
   if (style.lineHeight === undefined) {
-    const actualFontSize = fontSize === 'default' ? 'm' : fontSize;
+    const actualFontSize = fontSize === 'default' ? 'm' : String(fontSize);
     lineHeight = `${actualFontSize}-normal`;
   } else if (style.lineHeight === 'inherit') {
     lineHeight = 'inherit';
   } else if (
-    ['dense', 'normal', 'comfort', 'default'].includes(style.lineHeight)
+    ['dense', 'normal', 'comfort', 'default'].includes(String(style.lineHeight))
   ) {
     const density =
-      style.lineHeight === 'default' ? 'normal' : style.lineHeight;
-    const actualFontSize = fontSize === 'default' ? 'm' : fontSize;
+      style.lineHeight === 'default' ? 'normal' : String(style.lineHeight);
+    const actualFontSize = fontSize === 'default' ? 'm' : String(fontSize);
     lineHeight = `${actualFontSize}-${density}`;
   } else {
-    lineHeight = style.lineHeight;
+    lineHeight = String(style.lineHeight);
   }
 
   return {
-    fontSize,
-    fontWeight: style.fontWeight ?? 'default',
-    fontFamily: style.fontFamily ?? 'default',
+    fontSize: String(fontSize),
+    fontWeight: String(style.fontWeight ?? 'default'),
+    fontFamily: String(style.fontFamily ?? 'default'),
     lineHeight,
   };
 };
