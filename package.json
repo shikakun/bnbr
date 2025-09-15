@@ -21,14 +21,18 @@
     "format": "biome format --write .",
     "check": "biome check --write .",
     "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "dependencies": {
-    "@bnbr/react": "workspace:*",
-    "@bnbr/design-tokens": "workspace:*"
+    "@bnbr/design-tokens": "workspace:*",
+    "@bnbr/react": "workspace:*"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
+    "@changesets/cli": "^2.29.7",
     "typescript": "^5.9.2",
     "vite": "^7.1.5"
   },
