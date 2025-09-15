@@ -1,6 +1,6 @@
 {
   "name": "bnbr",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A craft React UI component library.",
   "type": "module",
   "main": "index.js",
